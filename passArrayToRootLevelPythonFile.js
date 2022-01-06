@@ -26,6 +26,10 @@ const { spawn } = require('child_process');
 // const passingArrayToFunctionAtRootDirectory = spawn("python", ["-c", 'from pythonForNode import *; testingSys.tryLooping(["a","b","c"])']);
 // const passingArrayToFunctionAtRootDirectory = spawn("python", ["-c", 'from pythonForNode/testingSys import *; tryLooping(["a","b","c"])']);
 
+// Tried setting up a file to handle gathering the methods from subdirectory, but did not work...
+// const passingArrayToFunctionAtRootDirectory = spawn("python", ["-c", 'from pythonSysPath import *; tryLooping(["a","b","c"])']);
+// const passingArrayToFunctionAtRootDirectory = spawn('python', ['-c', 'pythonSysPath.py', ['SOMETHING', 'ELSE']]);
+// const passingArrayToFunctionAtRootDirectory = spawn('python', ['-c', 'import pythonSysPath; tryLooping(["SOMETHING", "ELSE"])']);
 
 
 passingArrayToFunctionAtRootDirectory.stdout.on('data', function (data) {
